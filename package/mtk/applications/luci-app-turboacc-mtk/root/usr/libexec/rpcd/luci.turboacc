@@ -59,8 +59,6 @@ local methods = {
 			if fs.access("/sys/module/xt_FULLCONENAT/refcnt") and
 			(readfile("/sys/module/xt_FULLCONENAT/refcnt") or "0") ~= "0" then
 				fctype = "xt_FULLCONENAT"
-			elseif sys.call("iptables -t nat -L zone_wan_postrouting | grep -q fullcone") == 0 then
-				fctype = "Boardcom Fullcone"
 			end
 			print(json.stringify({ type = fctype }))
 		end

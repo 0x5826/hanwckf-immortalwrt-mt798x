@@ -254,7 +254,6 @@ return view.extend({
 		o.value('0', _('Disable'))
 		if (features.hasXTFULLCONENAT)
 			o.value('1', _('XT_FULLCONE_NAT'));
-		o.value('2', _('Boardcom_FULLCONE_NAT'));
 		o.default = '0';
 		o.rmempty = false;
 
